@@ -1,0 +1,14 @@
+import { configureStore } from '@reduxjs/toolkit';
+import authReducer from './features/authSlice';
+import filesReducer from './features/filesSlice';
+import analysisReducer from './features/analysisSlice';
+import adminReducer from './features/adminSlice';
+
+export const store = configureStore({
+  reducer: {
+    auth: authReducer,
+    files: filesReducer,
+    analysis: analysisReducer,
+    admin: adminReducer,
+  },
+});
